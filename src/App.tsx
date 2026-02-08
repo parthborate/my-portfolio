@@ -1,15 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Hero from './sections/Hero';
-import About from './sections/About';
-import Experience from './sections/Experience';
-import Skills from './sections/Skills';
-import Projects from './sections/Projects';
-import Education from './sections/Education';
-import Contact from './sections/Contact';
-import Navigation from './sections/Navigation';
-import './App.css';
+import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { LiquidEther } from "./components/reactbits";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Experience from "./sections/Experience";
+import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
+import Education from "./sections/Education";
+import Contact from "./sections/Contact";
+import Navigation from "./sections/Navigation";
+import "./App.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,20 +19,17 @@ function App() {
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Initial load animation
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 100);
-
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     if (!isLoaded) return;
 
-    // Setup scroll-triggered animations
-    const sections = document.querySelectorAll('.animate-section');
-    
+    const sections = document.querySelectorAll(".animate-section");
+
     sections.forEach((section) => {
       gsap.fromTo(
         section,
@@ -40,12 +38,12 @@ function App() {
           opacity: 1,
           y: 0,
           duration: 0.8,
-          ease: 'power3.out',
+          ease: "power3.out",
           scrollTrigger: {
             trigger: section,
-            start: 'top 80%',
-            end: 'top 50%',
-            toggleActions: 'play none none reverse',
+            start: "top 80%",
+            end: "top 50%",
+            toggleActions: "play none none reverse",
           },
         }
       );
@@ -57,15 +55,32 @@ function App() {
   }, [isLoaded]);
 
   return (
-    <div ref={mainRef} className="relative min-h-screen bg-dark overflow-x-hidden">
-      {/* Grain overlay */}
-      <div className="grain-overlay" />
-      
+    <div
+      ref={mainRef}
+      className="relative min-h-screen bg-dark overflow-x-hidden"
+    >
+      {/* Global LiquidEther background */}
+      <div className="fixed inset-0 z-0">
+        <LiquidEther
+          colors={["#2d62ff", "#00e5ff", "#ff0055"]}
+          mouseForce={20}
+          cursorSize={100}
+          resolution={0.5}
+          autoDemo
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+        />
+      </div>
+
       {/* Navigation */}
       <Navigation />
-      
+
       {/* Main content */}
-      <main className={`transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      <main
+        className={`relative z-10 transition-opacity duration-500 ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <Hero />
         <About />
         <Experience />
@@ -74,9 +89,9 @@ function App() {
         <Education />
         <Contact />
       </main>
-      
+
       {/* Footer */}
-      <footer className="py-8 bg-dark border-t border-white/10">
+      <footer className="relative z-10 py-8 bg-dark/80 backdrop-blur-sm border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-neutral-gray text-sm">
             © 2024 Parth Borate. All rights reserved.

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { Linkedin, Github, Twitter, ChevronDown } from "lucide-react";
-import { DecryptedText, LiquidEther, ShinyText } from "../components/reactbits";
+import { DecryptedText, ShinyText } from "../components/reactbits";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -90,21 +90,8 @@ const Hero = () => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Aurora background */}
-      <div className="absolute inset-0 z-0">
-        <LiquidEther
-          colors={["#2d62ff", "#00e5ff", "#ff0055"]}
-          mouseForce={20}
-          cursorSize={100}
-          resolution={0.5}
-          autoDemo
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-        />
-      </div>
-
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark/50 to-dark z-[1]" />
+      <div className="absolute inset-0 bg-dark/1 backdrop-blur-sm bg-gradient-to-b from-transparent via-dark/50 to-dark z-[1]" />
 
       {/* Content container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-20">
@@ -150,14 +137,13 @@ const Hero = () => {
               {[
                 {
                   icon: Linkedin,
-                  href: "https://linkedin.com",
+                  href: "https://www.linkedin.com/in/parthborate/",
                   label: "LinkedIn",
                 },
-                { icon: Github, href: "https://github.com", label: "GitHub" },
                 {
-                  icon: Twitter,
-                  href: "https://twitter.com",
-                  label: "Twitter",
+                  icon: Github,
+                  href: "https://github.com/parthborate",
+                  label: "GitHub",
                 },
               ].map(({ icon: Icon, href, label }) => (
                 <a
@@ -171,22 +157,6 @@ const Hero = () => {
                   <Icon size={20} />
                 </a>
               ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-8">
-              <a
-                href="#contact"
-                className="px-8 py-3 bg-accent-blue text-white rounded-full font-medium hover:bg-accent-cyan transition-all duration-300 hover:shadow-glow text-center"
-              >
-                Get In Touch
-              </a>
-              <a
-                href="#projects"
-                className="px-8 py-3 border border-white/30 text-white rounded-full font-medium hover:border-accent-cyan hover:text-accent-cyan transition-all duration-300 text-center"
-              >
-                View Projects
-              </a>
             </div>
           </div>
 
@@ -209,7 +179,7 @@ const Hero = () => {
                 />
 
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark/30 to-transparent z-[1]" />
               </div>
 
               {/* Decorative elements */}

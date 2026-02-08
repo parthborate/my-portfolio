@@ -1,5 +1,5 @@
-import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
-import { AnimatedContent, SpotlightCard } from '../components/reactbits';
+import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
+import { AnimatedContent, SpotlightCard } from "../components/reactbits";
 
 interface EducationItem {
   id: number;
@@ -14,31 +14,34 @@ const Education = () => {
   const educationData: EducationItem[] = [
     {
       id: 1,
-      institution: 'University of Illinois at Chicago',
-      location: 'Chicago, USA',
-      degree: 'Master of Science, Management Information Systems',
-      period: 'Aug 2024 – Present',
+      institution: "University of Illinois at Chicago",
+      location: "Chicago, USA",
+      degree: "Master of Science, Management Information Systems",
+      period: "Aug 2024 – Present",
       achievements: [
-        'Focusing on advanced information systems and cloud technologies',
-        'Coursework in Data Analytics, Cloud Computing, and Enterprise Systems',
+        "Focusing on advanced information systems and cloud technologies",
+        "Coursework in Data Analytics, Cloud Computing, and Enterprise Systems",
       ],
     },
     {
       id: 2,
-      institution: 'University of Pune',
-      location: 'Pune, India',
-      degree: 'Bachelor of Engineering in Computer Engineering',
-      period: 'Graduated May 2020',
+      institution: "University of Pune",
+      location: "Pune, India",
+      degree: "Bachelor of Engineering in Computer Engineering",
+      period: "Graduated May 2020",
       achievements: [
-        'Strong foundation in computer science fundamentals',
-        'Active participant in coding competitions and hackathons',
-        'Graduated with honors',
+        "Strong foundation in computer science fundamentals",
+        "Active participant in coding competitions and hackathons",
+        "Graduated with honors",
       ],
     },
   ];
 
   return (
-    <section id="education" className="relative py-24 lg:py-32 bg-dark overflow-hidden">
+    <section
+      id="education"
+      className="relative py-24 lg:py-32 bg-transparent overflow-hidden"
+    >
       {/* Background effects */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-accent-blue/5 rounded-full blur-3xl" />
 
@@ -50,8 +53,8 @@ const Education = () => {
               EDUCATION
             </h2>
             <p className="text-neutral-gray text-lg max-w-2xl mx-auto">
-              Academic foundation combined with continuous learning and professional
-              development.
+              Academic foundation combined with continuous learning and
+              professional development.
             </p>
           </div>
         </AnimatedContent>
@@ -62,7 +65,7 @@ const Education = () => {
             <AnimatedContent
               key={edu.id}
               distance={80}
-              direction={index % 2 === 0 ? 'horizontal' : 'horizontal'}
+              direction={index % 2 === 0 ? "horizontal" : "horizontal"}
               reverse={index % 2 !== 0}
               delay={0.1 + index * 0.2}
             >
@@ -129,17 +132,24 @@ const Education = () => {
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { name: 'AWS Certified', provider: 'Amazon Web Services' },
-                { name: 'Kubernetes Fundamentals', provider: 'Linux Foundation' },
-                { name: 'Docker Mastery', provider: 'Udemy' },
-                { name: 'DevOps Professional', provider: 'Coursera' },
+                { name: "AWS Certified", provider: "Amazon Web Services" },
+                {
+                  name: "Kubernetes Fundamentals",
+                  provider: "Linux Foundation",
+                },
+                { name: "Docker Mastery", provider: "Udemy" },
+                { name: "DevOps Professional", provider: "Coursera" },
               ].map((cert) => (
                 <div
                   key={cert.name}
                   className="p-4 bg-surface/50 rounded-xl text-center hover:bg-surface transition-colors"
                 >
-                  <p className="text-white/90 text-sm font-medium">{cert.name}</p>
-                  <p className="text-neutral-gray text-xs mt-1">{cert.provider}</p>
+                  <p className="text-white/90 text-sm font-medium">
+                    {cert.name}
+                  </p>
+                  <p className="text-neutral-gray text-xs mt-1">
+                    {cert.provider}
+                  </p>
                 </div>
               ))}
             </div>

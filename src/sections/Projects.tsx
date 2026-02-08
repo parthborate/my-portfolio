@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { ExternalLink, Github, Award, Rocket } from 'lucide-react';
-import { AnimatedContent, SpotlightCard } from '../components/reactbits';
+import { useState } from "react";
+import { ExternalLink, Github, Award, Rocket } from "lucide-react";
+import { AnimatedContent, SpotlightCard } from "../components/reactbits";
 
 interface Project {
   id: number;
@@ -21,36 +21,36 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'VR Earth and Moon Explorer',
+      title: "VR Earth and Moon Explorer",
       description:
-        'An innovative VR application developed for the Indian Space Research Organization (ISRO), allowing users to explore and interact with detailed 3D models of Earth and the Moon on both Android and Windows platforms.',
-      image: '/project-vr-earth.jpg',
-      tags: ['C#', 'Java', 'DBMS', 'Unity', 'VR SDKs'],
+        "An innovative VR application developed for the Indian Space Research Organization (ISRO), allowing users to explore and interact with detailed 3D models of Earth and the Moon on both Android and Windows platforms.",
+      image: "/project-vr-earth.jpg",
+      tags: ["C#", "Java", "DBMS", "Unity", "VR SDKs"],
       achievements: [
-        'Awarded First Prize at the National Smart India Hackathon',
-        'Successfully combined advanced VR technology with educational content',
-        'Showcased the potential of virtual reality in space exploration',
+        "Awarded First Prize at the National Smart India Hackathon",
+        "Successfully combined advanced VR technology with educational content",
+        "Showcased the potential of virtual reality in space exploration",
       ],
       links: {
-        demo: '#',
-        github: '#',
+        demo: "#",
+        github: "#",
       },
     },
     {
       id: 2,
-      title: 'Assembly Line Simulator in VR',
+      title: "Assembly Line Simulator in VR",
       description:
-        'A comprehensive VR simulator for Techno Spark ASM, providing an interactive virtual environment where users could explore and engage with a fully modeled vehicle production assembly line on Windows.',
-      image: '/project-assembly-line.jpg',
-      tags: ['C#', 'Java', 'DBMS', '3D Modeling', 'VR Development'],
+        "A comprehensive VR simulator for Techno Spark ASM, providing an interactive virtual environment where users could explore and engage with a fully modeled vehicle production assembly line on Windows.",
+      image: "/project-assembly-line.jpg",
+      tags: ["C#", "Java", "DBMS", "3D Modeling", "VR Development"],
       achievements: [
-        'Secured First Prize from the Techno Spark Committee',
-        'Innovative use of VR technology to enhance training efficiency',
-        'Accurate simulation of complex manufacturing processes',
+        "Secured First Prize from the Techno Spark Committee",
+        "Innovative use of VR technology to enhance training efficiency",
+        "Accurate simulation of complex manufacturing processes",
       ],
       links: {
-        demo: '#',
-        github: '#',
+        demo: "#",
+        github: "#",
       },
     },
   ];
@@ -63,7 +63,10 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="relative py-24 lg:py-32 bg-dark overflow-hidden">
+    <section
+      id="projects"
+      className="relative py-24 lg:py-32 bg-transparent overflow-hidden"
+    >
       {/* Background effects */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent-magenta/5 rounded-full blur-3xl -translate-y-1/2" />
 
@@ -75,8 +78,8 @@ const Projects = () => {
               PROJECTS
             </h2>
             <p className="text-neutral-gray text-lg max-w-2xl mx-auto">
-              Showcasing innovative solutions and award-winning VR experiences that push the
-              boundaries of technology.
+              Showcasing innovative solutions and award-winning VR experiences
+              that push the boundaries of technology.
             </p>
           </div>
         </AnimatedContent>
@@ -102,9 +105,9 @@ const Projects = () => {
                     className="absolute inset-0 w-full h-full transition-transform duration-700 hover:scale-105"
                     style={{
                       backgroundImage: `url(${project.image})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      filter: 'saturate(0.8)',
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      filter: "saturate(0.8)",
                     }}
                   />
 
@@ -152,7 +155,9 @@ const Projects = () => {
                             className="flex items-center gap-2 px-4 py-2 bg-surface/80 rounded-lg"
                           >
                             <Award size={16} className="text-accent-magenta" />
-                            <span className="text-sm text-white/80">{achievement}</span>
+                            <span className="text-sm text-white/80">
+                              {achievement}
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -189,7 +194,9 @@ const Projects = () => {
         {/* More projects hint */}
         <AnimatedContent distance={40} direction="vertical" delay={0.5}>
           <div className="text-center mt-16">
-            <p className="text-neutral-gray mb-4">Want to see more of my work?</p>
+            <p className="text-neutral-gray mb-4">
+              Want to see more of my work?
+            </p>
             <a
               href="https://github.com"
               target="_blank"
