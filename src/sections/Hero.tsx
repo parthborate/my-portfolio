@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { Linkedin, Github, Twitter, ChevronDown } from "lucide-react";
+import { Linkedin, Github, ChevronDown } from "lucide-react";
 import { DecryptedText, ShinyText } from "../components/reactbits";
 
 const Hero = () => {
