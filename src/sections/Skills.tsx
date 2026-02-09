@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Code2, Globe, Database, Cloud, Wrench, Terminal } from "lucide-react";
+import { Code2, Globe, Database, Cloud, Wrench } from "lucide-react";
 import { AnimatedContent, SpotlightCard } from "../components/reactbits";
 
 interface SkillCategory {
