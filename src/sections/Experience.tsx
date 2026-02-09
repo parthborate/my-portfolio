@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Briefcase, MapPin } from "lucide-react";
 import { AnimatedContent, SpotlightCard } from "../components/reactbits";
 
 interface ExperienceItem {
