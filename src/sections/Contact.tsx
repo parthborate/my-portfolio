@@ -70,8 +70,9 @@ const Contact = () => {
           <div className="mt-8 p-4 glass rounded-xl border-l-4 border-accent-cyan">
             <p className="text-white font-medium mb-1">Currently Available</p>
             <p className="text-neutral-gray text-sm">
-              Open to Summer 2025 internship opportunities in Cloud, DevOps, and
-              Technical Consulting roles.
+              Open to Full-Time opportunities in Cloud, DevOps, and Technical
+              Consulting roles. Available for interviews and discussions on
+              weekdays.
             </p>
           </div>
         </AnimatedContent>

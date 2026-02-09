@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, Github, Award, Rocket } from "lucide-react";
+import { ExternalLink, Award } from "lucide-react";
 import { AnimatedContent, SpotlightCard } from "../components/reactbits";
 
 interface Project {
@@ -9,10 +9,6 @@ interface Project {
   image: string;
   tags: string[];
   achievements: string[];
-  links: {
-    demo?: string;
-    github?: string;
-  };
 }
 
 const Projects = () => {
@@ -31,10 +27,6 @@ const Projects = () => {
         "Successfully combined advanced VR technology with educational content",
         "Showcased the potential of virtual reality in space exploration",
       ],
-      links: {
-        demo: "#",
-        github: "#",
-      },
     },
     {
       id: 2,
@@ -48,10 +40,6 @@ const Projects = () => {
         "Innovative use of VR technology to enhance training efficiency",
         "Accurate simulation of complex manufacturing processes",
       ],
-      links: {
-        demo: "#",
-        github: "#",
-      },
     },
   ];
 
@@ -148,7 +136,7 @@ const Projects = () => {
                       </p>
 
                       {/* Achievements */}
-                      <div className="flex flex-wrap gap-3 mb-6">
+                      <div className="flex flex-wrap gap-3">
                         {project.achievements.map((achievement, i) => (
                           <div
                             key={i}
@@ -160,28 +148,6 @@ const Projects = () => {
                             </span>
                           </div>
                         ))}
-                      </div>
-
-                      {/* Links */}
-                      <div className="flex gap-4">
-                        {project.links.demo && (
-                          <a
-                            href={project.links.demo}
-                            className="flex items-center gap-2 px-6 py-3 bg-accent-blue text-white rounded-full font-medium hover:bg-accent-cyan transition-all duration-300 hover:shadow-glow"
-                          >
-                            <Rocket size={18} />
-                            <span>Live Demo</span>
-                          </a>
-                        )}
-                        {project.links.github && (
-                          <a
-                            href={project.links.github}
-                            className="flex items-center gap-2 px-6 py-3 border border-white/30 text-white rounded-full font-medium hover:border-accent-cyan hover:text-accent-cyan transition-all duration-300"
-                          >
-                            <Github size={18} />
-                            <span>View Code</span>
-                          </a>
-                        )}
                       </div>
                     </div>
                   </div>

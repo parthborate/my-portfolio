@@ -96,7 +96,7 @@ const Experience = () => {
                       : "right-1/2 mr-6 pr-2"
                   }`}
                 >
-                  <span className="text-sm text-accent-cyan font-medium whitespace-nowrap">
+                  <span className="text-xl text-accent-cyan font-medium whitespace-nowrap">
                     {exp.period}
                   </span>
                 </div>
@@ -144,10 +144,6 @@ const Experience = () => {
 
                       {/* Meta info */}
                       <div className="flex flex-wrap gap-4 mb-6 text-sm text-neutral-gray">
-                        <div className="flex items-center gap-1">
-                          <Calendar size={14} />
-                          <span>{exp.period}</span>
-                        </div>
                         <div className="flex items-center gap-1">
                           <MapPin size={14} />
                           <span>{exp.location}</span>
