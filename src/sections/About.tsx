@@ -9,7 +9,7 @@ const About = () => {
       label: "Years Experience",
       color: "#2d62ff",
     },
-    { icon: Code, value: "50+", label: "Projects Completed", color: "#00e5ff" },
+    { icon: Code, value: "15+", label: "Projects Completed", color: "#00e5ff" },
     { icon: Users, value: "20+", label: "Happy Clients", color: "#ff0055" },
     { icon: Award, value: "2", label: "National Awards", color: "#2d62ff" },
   ];
@@ -57,8 +57,8 @@ const About = () => {
                 </span>{" "}
                 with 4 years of experience in DevOps and cloud technologies,
                 holding a Bachelor&apos;s in Computer Science and currently
-                pursuing a Master&apos;s in Management Information Systems (MIS)
-                from UIC.
+                completed my Master&apos;s in Management Information Systems
+                (MIS) from University of Illinois Chicago (UIC).
               </p>
 
               <p className="text-base text-neutral-gray leading-relaxed">
@@ -71,28 +71,24 @@ const About = () => {
               </p>
 
               <p className="text-base text-neutral-gray leading-relaxed">
-                Seeking a summer 2025 internship to leverage my extensive
-                experience in a dynamic and innovative environment. Passionate
-                about transforming complex infrastructure into seamless digital
+                Seeking Full-Time job to leverage my extensive experience in a
+                dynamic and innovative environment. Passionate about
+                transforming complex infrastructure into seamless digital
                 experiences.
               </p>
 
               {/* Key highlights */}
               <div className="flex flex-wrap gap-3 pt-4">
-                {[
-                  "DevOps",
-                  "Cloud Architecture",
-                  "VR Development",
-                  "API Design",
-                  "API Design",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-4 py-2 bg-surface border border-white/10 rounded-full text-sm text-white/80 hover:border-accent-blue hover:text-accent-cyan transition-all duration-300"
-                  >
-                    {tag}
-                  </span>
-                ))}
+                {["DevOps", "AWS", "Azure", "DevSecOps", "Data Analytics"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="px-4 py-2 bg-surface border border-white/10 rounded-full text-sm text-white/80 hover:border-accent-blue hover:text-accent-cyan transition-all duration-300"
+                    >
+                      {tag}
+                    </span>
+                  )
+                )}
               </div>
             </div>
           </AnimatedContent>

@@ -125,8 +125,8 @@ const Hero = () => {
             {/* Description */}
             <p className="text-neutral-gray text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8">
               Transforming complex infrastructure into seamless digital
-              experiences. Specializing in DevOps, Cloud Architecture, and VR
-              Development.
+              experiences. Specializing in DevOps, DevSecOps, Cloud
+              Architecture, and Data Analytics.
             </p>
 
             {/* Social links */}

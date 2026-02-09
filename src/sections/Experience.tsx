@@ -14,28 +14,6 @@ const Experience = () => {
   const experiences: ExperienceItem[] = [
     {
       id: 0,
-      company: "Company Name",
-      location: "Location",
-      role: "Your Role",
-      period: "Start – End",
-      achievements: ["Achievement 1", "Achievement 2", "Achievement 3"],
-    },
-    {
-      id: 1,
-      company: "Mainline Information Systems",
-      location: "Remote, India",
-      role: "Technical Consultant",
-      period: "Jan 2022 – Jun 2024",
-      achievements: [
-        "Led MongoDB scripts for automated data management, improving reporting accuracy by 35%",
-        "Spearheaded Auto Reply feature for BCR using AWS stack, benefiting 1,000+ customers with $100,000+ cost savings",
-        "Deployed cloud services using AWS, Docker, and Kubernetes, achieving 50% improvement in deployment efficiency",
-        "Developed RESTful APIs using Java, Spring Boot, and Hibernate, leading to 25% increase in user engagement",
-        "Managed microservices in Java and Kotlin resulting in 30% reduction in development time",
-      ],
-    },
-    {
-      id: 2,
       company: "Xenstack",
       location: "India",
       role: "Cloud and DevOps Engineer",
@@ -46,6 +24,34 @@ const Experience = () => {
         "Automated infrastructure provisioning using Terraform and Ansible",
         "Implemented monitoring and logging solutions using Prometheus and Grafana",
         "Collaborated with development teams to optimize application performance",
+      ],
+    },
+    {
+      id: 1,
+      company: "Axcelinno Technologies",
+      location: "Remote, India",
+      role: "Solutions and Innovations Consultant",
+      period: "Jan 2022 – Dec 2023",
+      achievements: [
+        "Worked on AWS cloud migrations end to end. Reduced downtime by 40% and improved release speed by 30%.",
+        "Managed multiple AWS environments as the primary consultant. Maintained 99.9% uptime.",
+        "Cut AWS spend by 15% to 25% through rightsizing, autoscaling tuning, and storage tiering.",
+        "Improved AWS security with IAM access control, KMS encryption, CloudTrail, and Config. Cut security issues by 30%.",
+        "Set up CloudWatch dashboards and alerts, and wrote runbooks. Improved issue detection by 50% and reduced recovery time by 35%.",
+      ],
+    },
+    {
+      id: 2,
+      company: "Mainline Information Systems",
+      location: "Remote, India",
+      role: "Technical Consultant",
+      period: "Jan 2023 – Jun 2024",
+      achievements: [
+        "Led MongoDB scripts for automated data management, improving reporting accuracy by 35%",
+        "Spearheaded Auto Reply feature for BCR using AWS stack, benefiting 1,000+ customers with $100,000+ cost savings",
+        "Deployed cloud services using AWS, Docker, and Kubernetes, achieving 50% improvement in deployment efficiency",
+        "Developed RESTful APIs using Java, Spring Boot, and Hibernate, leading to 25% increase in user engagement",
+        "Managed microservices in Java and Kotlin resulting in 30% reduction in development time",
       ],
     },
   ];

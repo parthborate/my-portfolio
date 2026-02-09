@@ -57,13 +57,6 @@ const Skills = () => {
       skills: ["Linux", "Git", "Postman", "Maven", "Jira", "Confluence"],
       color: "#00e5ff",
     },
-    {
-      id: 6,
-      title: "VR Development",
-      icon: Terminal,
-      skills: ["Unity", "C# for VR", "3D Modeling", "VR SDKs"],
-      color: "#ff0055",
-    },
   ];
 
   // Mouse move handler for tilt effect
@@ -178,9 +171,10 @@ const Skills = () => {
               <div className="space-y-4">
                 {[
                   { name: "Cloud & DevOps", level: 95 },
-                  { name: "API Development", level: 90 },
-                  { name: "Database Management", level: 85 },
-                  { name: "VR Development", level: 80 },
+                  { name: "Database Management", level: 75 },
+                  { name: "Web Development", level: 90 },
+                  { name: "Programming Languages", level: 85 },
+                  { name: "Developer Colaboration Tools", level: 90 },
                 ].map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between text-sm mb-1">
@@ -205,38 +199,29 @@ const Skills = () => {
               spotlightColor="rgba(0, 229, 255, 0.15)"
             >
               <h3 className="text-xl font-display font-semibold text-white mb-6">
-                Certifications & Awards
+                Certifications
               </h3>
-              <div className="space-y-4">
+              <div className="grid grid-cols-3 gap-4">
                 {[
-                  {
-                    title: "First Prize - National Smart India Hackathon",
-                    org: "ISRO VR Project",
-                  },
-                  {
-                    title: "First Prize - Techno Spark Committee",
-                    org: "Assembly Line Simulator",
-                  },
-                  {
-                    title: "AWS Cloud Practitioner",
-                    org: "Amazon Web Services",
-                  },
-                  {
-                    title: "DevOps Professional",
-                    org: "Industry Recognition",
-                  },
+                  { img: "/CDPM.webp", title: "" },
+                  { img: "/cprat.png", title: "" },
+                  { img: "/pmp.png", title: "" },
+                  { img: "/Safe.png", title: "" },
+                  { img: "/scm.png", title: "" },
+                  { img: "/tableau.png", title: "" },
                 ].map((cert, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 p-3 rounded-lg bg-surface/50 hover:bg-surface transition-colors"
+                    className="flex flex-col items-center gap-2 p-4 rounded-lg bg-surface/50 hover:bg-surface transition-colors"
                   >
-                    <div className="w-2 h-2 rounded-full bg-accent-blue mt-2 flex-shrink-0" />
-                    <div>
-                      <p className="text-white/90 text-sm font-medium">
-                        {cert.title}
-                      </p>
-                      <p className="text-neutral-gray text-xs">{cert.org}</p>
-                    </div>
+                    <img
+                      src={cert.img}
+                      alt={cert.title || "Certification"}
+                      className="w-16 h-16 object-contain"
+                    />
+                    <p className="text-white/90 text-xs font-medium text-center">
+                      {cert.title || "\u00A0"}
+                    </p>
                   </div>
                 ))}
               </div>

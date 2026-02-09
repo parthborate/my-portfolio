@@ -17,7 +17,7 @@ const Education = () => {
       institution: "University of Illinois at Chicago",
       location: "Chicago, USA",
       degree: "Master of Science, Management Information Systems",
-      period: "Aug 2024 – Present",
+      period: "Graduated May 2026",
       achievements: [
         "Focusing on advanced information systems and cloud technologies",
         "Coursework in Data Analytics, Cloud Computing, and Enterprise Systems",
