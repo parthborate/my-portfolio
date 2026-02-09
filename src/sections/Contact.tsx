@@ -6,8 +6,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "pbora@uic.edu",
-      href: "mailto:pbora@uic.edu",
+      value: "psborate97@icloud.com",
+      href: "mailto:psborate97@icloud.com",
     },
     {
       icon: Phone,
@@ -32,7 +32,7 @@ const Contact = () => {
         <AnimatedContent distance={50} direction="vertical">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-4">
-              INITIATE CONTACT
+              CONTACT ME
             </h2>
             <p className="text-neutral-gray text-lg max-w-2xl mx-auto">
               Ready to collaborate on your next project? Let&apos;s connect and
